@@ -1,9 +1,6 @@
-console.log("Program started");
-
+console.log("Program running");
 
 function generateQR() {
-
-
     let imgQR = document.getElementById("imgQR");
     let qrImg = document.getElementById("qrImg");
     let qrText = document.getElementById("qrText");
