@@ -52,16 +52,20 @@ Handles the interaction with the QR Code API, updates the DOM with the generated
 ### Example JavaScript Code Snippet
 
 ```javascript
-function generateQRCode() {
-    var input = document.getElementById('inputText').value;
-    var qrImg = document.getElementById('qrImg');
-    
-    if (input) {
-        var apiUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(input)}&size=200x200`;
-        qrImg.src = apiUrl;
-        qrImg.style.display = 'block';
-    } else {
-        qrImg.style.display = 'none';
+function generateQR() {
+    let imgQR = document.getElementById("imgQR");
+    let qrImg = document.getElementById("qrImg");
+    let qrText = document.getElementById("qrText");
+
+    if (qrText.value.length > 0) {
+        qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value;
+        imgQR.classList.add("show-img");
+    }
+    else {
+        qrText.classList.add("error");
+        setTimeout(() => {
+            qrText.classList.remove("error");
+        }, 1000);
     }
 }
 ```
