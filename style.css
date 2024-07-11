@@ -65,7 +65,7 @@ nav {
 }
 
 #imgQR {
-    /* display: none; */
+    display: none;
     width: 200px;
     border-radius: 5px;
     overflow: hidden;
@@ -125,5 +125,4 @@ footer {
 .rightsfooter {
     text-align: center;
     color: wheat;
-    padding: 12px 0;
 }

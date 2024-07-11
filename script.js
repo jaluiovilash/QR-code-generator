@@ -6,6 +6,7 @@ function generateQR() {
     let qrText = document.getElementById("qrText");
 
     if (qrText.value.length > 0) {
+        imgQR.style.display = "block";
         qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value;
         imgQR.classList.add("show-img");
     }
